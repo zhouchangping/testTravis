@@ -1,0 +1,29 @@
+{
+  "name": "testtravis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhouchangping/testTravis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhouchangping/testTravis/issues"
+  },
+  "homepage": "https://github.com/zhouchangping/testTravis#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "install": "^0.12.2",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.1",
+    "npm": "^6.5.0",
+    "supertest": "^3.3.0"
+  }
+}
