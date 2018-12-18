@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/zhouchangping/testTravis#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "koa": "^2.6.2"
   },
   "devDependencies": {
     "install": "^0.12.2",

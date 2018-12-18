@@ -1,11 +1,13 @@
-const express = require("express");
-const app = express();
-app.get('/', (req, res)=> {
-	res.json({
-		data: 'hello world'
-	});
+const Koa = require('koa');
+const app = new Koa();
+ 
+// response
+app.use(ctx => {
+  ctx.body = {
+  	data: "1"
+  }
 });
-app.listen(3000, ()=>{
-	console.log('server running');
-});
+ 
+app.listen(8000);
+
 module.exports = app;

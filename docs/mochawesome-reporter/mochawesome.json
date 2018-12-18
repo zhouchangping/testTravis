@@ -1,0 +1,97 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-12-18T13:50:18.542Z",
+    "end": "2018-12-18T13:50:18.696Z",
+    "duration": 154,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "577ad9cb-95ed-4017-8724-a5b1f6e09433",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "e3efd166-bf0e-43f9-ae29-c9ddbe65b04f",
+        "title": "node接口测试",
+        "fullFile": "E:\\testTravis\\tests\\service\\router.spec.js",
+        "file": "\\tests\\service\\router.spec.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook: must be on home page",
+            "fullTitle": "node接口测试 \"before all\" hook: must be on home page",
+            "timedOut": false,
+            "duration": 0,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "requestProxy.get('/')\n.expect(200, done);",
+            "err": {
+              "message": "TypeError: this.callback is not a function",
+              "estack": "TypeError: this.callback is not a function\n    at Server.listen (node_modules\\koa\\lib\\application.js:64:43)\n    at parserOnIncoming (_http_server.js:602:12)\n    at HTTPParser.parserOnHeadersComplete (_http_common.js:117:23)"
+            },
+            "isRoot": false,
+            "uuid": "295b54ca-4083-447e-9d7a-f8a7fedd0efe",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "test 接口测试",
+            "fullTitle": "node接口测试 test 接口测试",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "requestProxy\n.get('/')\n.expect(\"Content-Type\", /json/)\n.expect(200)\n.end(function (err, res) {\n\tif (err) {\n\t\treturn done(err);\n\t}\n\tif (res.body.data == \"1\") {\n\t\tdone();\n\t} else {\n\t\tdone(new Error('接口数据异常'));\n\t}\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "52765f5a-fa73-4520-9bb2-ed01929edb50",
+            "isHook": false,
+            "skipped": true
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [
+          "52765f5a-fa73-4520-9bb2-ed01929edb50"
+        ],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
