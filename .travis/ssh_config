@@ -1,5 +1,9 @@
-Host github.com
-User git
-StrictHostKeyChecking no
+Host 1199.29.6.254
+User root
+HostName 119.29.6.254
 IdentityFile ~/.ssh/git_rsa
-IdentitiesOnly yes
+Protocol 2
+Compression yes
+ServerAliveInterval 60
+ServerAliveCountMax 20
+LogLevel INFO
