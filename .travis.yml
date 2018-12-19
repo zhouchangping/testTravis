@@ -6,10 +6,3 @@ after_script:
 before_install:
 - openssl aes-256-cbc -K $encrypted_92c2e03cabf7_key -iv $encrypted_92c2e03cabf7_iv
   -in git_rsa.enc -out ~/.ssh/git_rsa -d
-# 改变文件权限
-  - chmod 600 ~/.ssh/git_rsa
-
-  # 配置 ssh
-   - eval $(ssh-agent)
-    - ssh-add ~/.ssh/id_rsa
-     - cp .travis/ssh_config ~/.ssh/config
