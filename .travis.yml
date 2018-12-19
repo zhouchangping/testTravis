@@ -3,8 +3,8 @@ node_js:
 - 7.7.1
 before_install:
 - openssl aes-256-cbc -K $encrypted_92c2e03cabf7_key -iv $encrypted_92c2e03cabf7_iv
-  -in .travis/git_rsa.enc -out ~/.ssh/git_rsa -d
-- chmod 600 ~/.ssh/git_rsa
+  -in .travis/git_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
 install: npm install
 script: npm run test
 addons:
