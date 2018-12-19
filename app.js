@@ -1,13 +1,10 @@
 const Koa = require('koa');
 const app = new Koa();
- 
-// response
-app.use(ctx => {
+
+app.use(async ctx => {
   ctx.body = {
-  	data: "1"
+    data:"Hello World!"
   }
 });
- 
-app.listen(8000);
-
+app.listen(3000);
 module.exports = app;
