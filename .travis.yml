@@ -6,3 +6,5 @@ before_install:
   -in .travis/git_rsa.enc -out ~/.ssh/git_rsa -d
 install: npm install
 script: npm run test
+after_script:
+- scp -o StrictHostKeyChecking=no app.js root@119.29.6.254:/usr/local/nginx/html/testTravis
