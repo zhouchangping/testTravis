@@ -15,4 +15,5 @@ mocha.run(function (errorLenth) {
 		console.log('单元测试成功');
 		process.exit();
 	}
-})
+});
+

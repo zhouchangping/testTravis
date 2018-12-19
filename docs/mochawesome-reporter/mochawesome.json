@@ -1,25 +1,25 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 0,
-    "passes": 0,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2018-12-18T13:50:18.542Z",
-    "end": "2018-12-18T13:50:18.696Z",
-    "duration": 154,
+    "start": "2018-12-19T06:54:34.609Z",
+    "end": "2018-12-19T06:54:34.755Z",
+    "duration": 146,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
-    "other": 2,
-    "hasOther": true,
-    "skipped": 1,
-    "hasSkipped": true,
-    "passPercentClass": "danger",
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "577ad9cb-95ed-4017-8724-a5b1f6e09433",
+    "uuid": "57d58b0c-6133-468a-85cf-fb63d8970cec",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "e3efd166-bf0e-43f9-ae29-c9ddbe65b04f",
+        "uuid": "0e5c3c60-b183-4a33-835b-3aa1ecda60fe",
         "title": "node接口测试",
         "fullFile": "E:\\testTravis\\tests\\service\\router.spec.js",
         "file": "\\tests\\service\\router.spec.js",
@@ -37,18 +37,14 @@
             "title": "\"before all\" hook: must be on home page",
             "fullTitle": "node接口测试 \"before all\" hook: must be on home page",
             "timedOut": false,
-            "duration": 0,
-            "state": "failed",
+            "duration": 66,
             "pass": false,
-            "fail": true,
+            "fail": false,
             "pending": false,
-            "code": "requestProxy.get('/')\n.expect(200, done);",
-            "err": {
-              "message": "TypeError: this.callback is not a function",
-              "estack": "TypeError: this.callback is not a function\n    at Server.listen (node_modules\\koa\\lib\\application.js:64:43)\n    at parserOnIncoming (_http_server.js:602:12)\n    at HTTPParser.parserOnHeadersComplete (_http_common.js:117:23)"
-            },
+            "code": "requestProxy.get('/')\n    .expect(200, done);",
+            "err": {},
             "isRoot": false,
-            "uuid": "295b54ca-4083-447e-9d7a-f8a7fedd0efe",
+            "uuid": "c64c97a6-ac61-4f7e-9691-b382438b0c52",
             "isHook": true,
             "skipped": false
           }
@@ -59,26 +55,28 @@
             "title": "test 接口测试",
             "fullTitle": "node接口测试 test 接口测试",
             "timedOut": false,
-            "duration": 0,
-            "pass": false,
+            "duration": 16,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
             "fail": false,
             "pending": false,
-            "code": "requestProxy\n.get('/')\n.expect(\"Content-Type\", /json/)\n.expect(200)\n.end(function (err, res) {\n\tif (err) {\n\t\treturn done(err);\n\t}\n\tif (res.body.data == \"1\") {\n\t\tdone();\n\t} else {\n\t\tdone(new Error('接口数据异常'));\n\t}\n});",
+            "code": "requestProxy\n    .get('/')\n    .expect('Content-Type', /json/)\n    .expect(200)\n    .end(function (err, res) {\n        if (err) return done(err);\n        if (res.body.data == \"Hello World!\") {\n            done();\n        } else {\n            done(new Error(\"接口数据异常\"));\n        }\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "52765f5a-fa73-4520-9bb2-ed01929edb50",
+            "uuid": "963d53bf-43c8-47e8-a5df-f67fa0246191",
             "isHook": false,
-            "skipped": true
+            "skipped": false
           }
         ],
         "suites": [],
-        "passes": [],
+        "passes": [
+          "963d53bf-43c8-47e8-a5df-f67fa0246191"
+        ],
         "failures": [],
         "pending": [],
-        "skipped": [
-          "52765f5a-fa73-4520-9bb2-ed01929edb50"
-        ],
-        "duration": null,
+        "skipped": [],
+        "duration": 16,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
