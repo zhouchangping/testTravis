@@ -12,4 +12,4 @@ addons:
     ssh_known_hosts: 119.29.6.254
 after_success:
 #- scp -o StrictHostKeyChecking=no app.js root@119.29.6.254:/home
-- scp -o stricthostkeychecking=no app.js root@119.29.6.254:/usr/local/nginx/html
+- ssh root@119.29.6.254 "cd /home; ls"
